@@ -16,8 +16,11 @@ local function run(ext)
     vim.keymap.set({"n", "i", "t"}, "<Esc>", "<C-\\><C-n>" , {buffer = 0})
 end
 
+M.run_current = function()
+   run(vim.fn.expand("%:e"))
+end
 
-api.nvim_add_user_command("RunCurrentFile", function() return run(vim.fn.expand("%:e")) end, {})
+api.nvim_add_user_command("RunCurrentFile", function() return M.run_current() end, {})
 
 
 return M
