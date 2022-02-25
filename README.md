@@ -20,8 +20,6 @@ Available placeholders are:
 - `${NE}` for the file name
 - `${N}`  for the file name without extension
 
-Note that the string passed is a shell command, so it can be something more elaborate like
-
 
 # Features
 Run current file in a neovim terminal.  
