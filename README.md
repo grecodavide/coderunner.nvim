@@ -1,13 +1,10 @@
 # coderunner.nvim
----
 Run code in neovim
 
 # Requirements
----
 This plugin requires neovim >= 0.6
 
 # Setup
----
 to set up this plugin, in a lua file require it and give it the commands:
 ```lua
 local cr = require("coderunner")
@@ -22,7 +19,6 @@ Available placeholders are:
 - `${N}`  for the file name without extension
 
 # Features
----
 Run current file in a neovim terminal.  
 The available functions are:  
 - `run_current`: creates a new buffer
