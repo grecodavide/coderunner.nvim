@@ -11,12 +11,17 @@ local cr = require("coderunner")
 cr.commands = {
     sh = "${FP}",
     py = "python ${FP}"
+    -- note that this is a command, so it can be something more elaborate 
+    c = "gcc -o ${N} ${FP};if [[ $? ]];then ${N}; fi"
 }
 ```
 Available placeholders are:
 - `${FP}` for the full path
 - `${NE}` for the file name
 - `${N}`  for the file name without extension
+
+Note that the string passed is a shell command, so it can be something more elaborate like
+
 
 # Features
 Run current file in a neovim terminal.  
