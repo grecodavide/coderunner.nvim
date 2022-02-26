@@ -8,7 +8,8 @@ local function run(ext, command)
     if c then
         c = c:gsub("${NE}", vim.fn.expand("%")):gsub("${N}", vim.fn.expand("%:p:r")):gsub("${FP}", vim.fn.expand("%:p"))
     else
-    c = "echo 'command for \"" .. ext .. "\" not found'"
+        vim.notify('command for "' .. ext .. '" not found')
+        return
     end
 
     -- open terminal with the right command
