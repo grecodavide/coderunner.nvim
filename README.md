@@ -1,5 +1,5 @@
 # coderunner.nvim
-Run code in neovim
+Run code in neovim's integrated terminal
 
 # Requirements
 This plugin requires (ATM) neovim >= 0.6
