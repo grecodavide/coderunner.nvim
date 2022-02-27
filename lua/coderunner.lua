@@ -2,6 +2,7 @@ local M = {}
 local api = vim.api
 M.commands = {}
 
+
 -- TODO:
 -- make keymap part better: how to set them for neovim < 0.6 only in buffer
 -- make it so that the user can pass the mappings (maybe with a `setup` function)

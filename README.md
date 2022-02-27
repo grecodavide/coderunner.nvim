@@ -2,7 +2,7 @@
 Run code in neovim
 
 # Requirements
-This plugin requires neovim >= 0.6
+This plugin requires (ATM) neovim >= 0.6
 
 # Setup
 to set up this plugin, in a lua file require it and give it the commands:
@@ -11,7 +11,7 @@ local cr = require("coderunner")
 cr.commands = {
     sh = "${FP}",
     py = "python ${FP}"
-    -- note that this is a command, so it can be something more elaborate 
+    -- note that this is a shell command, so it can be something more elaborate 
     c = "gcc -o ${N} ${FP};if [[ $? ]];then ${N}; fi"
 }
 ```
