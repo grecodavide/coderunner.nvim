@@ -25,10 +25,10 @@ Available placeholders are:
 Run current file in a neovim terminal.  
 The available functions are:  
 - `run_current`: creates a new buffer
-- `run_current_split`: creates a new split
-- `run_current_vsplit`: creates a new vertical split
 
 And the commands to do the same are:
 - `RunCurrent`
-- `RunCurrentSplit`
-- `RunCurrentVSplit`
+
+Note that you can create a split like so:
+- `:split | RunCurrent`
+- `:vsplit | RunCurrent`
