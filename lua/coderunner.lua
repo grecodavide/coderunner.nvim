@@ -23,12 +23,8 @@ local function run(ext, fp, ne, n)
     -- api.nvim_input("A") --uncomment to start in terminal mode
 
     -- go in insert mode
-    if vim.cmd("echo has 'nvim-0.6'") then
-        vim.keymap.set("n", "q", function() vim.api.nvim_command("bdelete!") end , {buffer = 0, silent = true})
-        vim.keymap.set({"n", "i", "t"}, "<Esc>", "<C-\\><C-n>" , {buffer = 0})
-    -- else
-        -- api.nvim_set_keymap("n", "q")
-    end
+    vim.keymap.set("n", "q", function() vim.api.nvim_command("bdelete!") end , {buffer = 0, silent = true})
+    vim.keymap.set({"n", "i", "t"}, "<Esc>", "<C-\\><C-n>" , {buffer = 0})
 end
 
 -- create functions and commands
