@@ -46,7 +46,7 @@ M.run_file = function(file)
    run(ext, file, name_ext, name)
 end
 
-api.nvim_add_user_command("RunCurrent",function() return M.run_current() end, {})
-api.nvim_add_user_command("RunFile", function(opts) M.run_file(opts.args) end, {nargs=1, complete="file"})
+api.nvim_create_user_command("RunCurrent",function() return M.run_current() end, {})
+api.nvim_create_user_command("RunFile", function(opts) M.run_file(opts.args) end, {nargs=1, complete="file"})
 
 return M
