@@ -3,10 +3,6 @@ local api = vim.api
 M.commands = {}
 
 
--- TODO:
--- make keymap part better: how to set them for neovim < 0.6 only in buffer
--- make it so that the user can pass the mappings (maybe with a `setup` function)
-
 -- args are: extension, file path, name and extension, only name
 local function run(ext, fp, ne, n)
     -- replace placeholders
@@ -19,7 +15,7 @@ local function run(ext, fp, ne, n)
     end
 
     -- open terminal with the right command
-    api.nvim_command("term " .. c )
+    api.nvim_command(string.format("term %s; echo -e 'END'", c ))
     -- api.nvim_input("A") --uncomment to start in terminal mode
 
     -- go in insert mode
