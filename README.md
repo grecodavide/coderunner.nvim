@@ -2,7 +2,7 @@
 Run code in neovim's integrated terminal
 
 # Requirements
-This plugin requires (ATM) neovim >= 0.6
+This plugin requires neovim >= 0.6
 
 # Setup
 to set up this plugin, in a lua file require it and give it the commands:
@@ -24,10 +24,12 @@ Available placeholders are:
 # Features
 Run current file in a neovim terminal.  
 The available functions are:  
-- `run_current`: creates a new buffer
+- `run_current`
+- `run_file` (requires filepath)
 
 And the commands to do the same are:
 - `RunCurrent`
+- `RunFile`
 
 Note that you can create a split like so:
 - `:split | RunCurrent`
